@@ -17,8 +17,9 @@ $$('form[data-lead]').forEach(f=>{
   const say=(m,c)=>{st.textContent=m;st.className='status '+(c||'')};
   f.addEventListener('submit',async e=>{
     e.preventDefault();
-    if(f._honey&&f._honey.value){say('Thank you!','ok');return}
-    if(!touched||Date.now()-T0<3500){say('One moment, please try again in a few seconds.','err');return}
+    if(f._honey&&f._honey.value){return}
+    if(Date.now()-T0<3500){say('Give the form a moment, then send again.','err');return}
+    if(!touched){say('One moment, please try again in a few seconds.','err');return}
     const d=new FormData(f);d.delete('_honey');
     const name=(d.get('name')||'').trim(),phone=(d.get('phone')||'').trim(),email=(d.get('email')||'').trim();
     if(name.length<2||name.length>80){say('Please add your name.','err');f.name.focus();return}
@@ -27,7 +28,7 @@ $$('form[data-lead]').forEach(f=>{
     if(!d.get('consent')){say('Please check the box so we are allowed to contact you.','err');return}
     for(const [k,v] of d.entries()){if(typeof v==='string'&&v.length>(k==='goals'?2000:200)){say('That message is a little long. Please shorten it.','err');return}}
     const body={};d.forEach((v,k)=>{body[k]=v});
-    body._subject='Arizona walk-in tub lead: '+name+' '+(body.zip||'')+' (walkintubsarizona.com'+location.pathname+')';
+    body._subject='Aging Safely Baths lead — walkintubsarizona.com';
     body._template='table';body._captcha='false';body.page=location.pathname;
     btn.disabled=true;say('Sending…');
     try{
