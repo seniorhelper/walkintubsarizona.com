@@ -322,3 +322,7 @@ h3{font-weight:700}
 
 /* liability note (footer) */
 .liability-note{max-width:1100px;margin:14px auto 0;padding:0 16px;font-size:13px;line-height:1.55;opacity:.85}
+
+.liability-note{max-width:1100px;margin:14px auto 0;padding:0 16px;font-size:13px;line-height:1.55;opacity:.85}
+#adu-sqft{width:12em!important}
+.mt28{margin-top:28px}
