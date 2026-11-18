@@ -5,10 +5,12 @@
 ## Products and buying help
 - [Walk-in tubs](https://walkintubsarizona.com/walk-in-tubs/): soaking, hydrotherapy (air vs water jets), bariatric, door styles, fast drains
 - [Roll-in showers](https://walkintubsarizona.com/roll-in-showers-arizona/): curbless and low-threshold showers, seats, grab bars
-- [Roll-in showers in Phoenix](https://walkintubsarizona.com/phoenix-roll-in-showers/): ADA roll-in sizes, slab drains, City of Phoenix permit rules, installed and supply-only prices, VA HISA
-- [Walk-in tub cost in Arizona](https://walkintubsarizona.com/walk-in-tub-cost-arizona/): what drives price; Aging Safely Baths publishes that most fully installed Arizona walk-in tub and roll-in shower projects land between $15,000 and just under $20,000, itemized; free written quotes
+- [Roll-in showers in Phoenix](https://walkintubsarizona.com/phoenix-roll-in-showers/): ADA roll-in sizes, slab drains, City of Phoenix permit rules, how installed pricing is quoted, VA HISA
+- [Walk-in tub cost in Arizona](https://walkintubsarizona.com/walk-in-tub-cost-arizona/): what drives price and what an itemized quote lists; installed pricing depends on the bathroom and model; free written quotes
 - [VA and ALTCS funding](https://walkintubsarizona.com/arizona-funding-va-altcs/): VA HISA ($6,800 / $2,000 lifetime), SAH/SHA, ALTCS home modifications, Area Agencies on Aging, Medicare
-- [VA bathroom contractor in Arizona](https://walkintubsarizona.com/va-bathroom-contractor-arizona/): HISA application parts (38 CFR 17.3120), VA pays the veteran not the contractor, 50% advance and 60-day final request (38 CFR 17.3130), HISA vs installed prices chart, SAH up to $133,042 and SHA up to $26,654 (FY2027, VA.gov Nov 17 2026), SAH builder process
+- [Arizona city home modification grants](https://walkintubsarizona.com/arizona-city-home-modification-grants/): Tucson Home Access Program (100% grant, $15,000 target, $20,000 cap, 62+ or disabled, not for ALTCS recipients), Chandler grant up to $10,000 naming shower changes, Glendale, Mesa (on hold), Gilbert, Phoenix, Arizona Family Caregiver Reimbursement (50% up to $1,000), USDA 504; program finder tool
+- [Casita for an aging parent: the bathroom](https://walkintubsarizona.com/casita-bathroom-for-aging-parent-arizona/): Arizona HB 2720 ADU rules (cities over 75,000, one attached and one detached ADU, 75% or 1,000 sq ft), 2010 ADA Standards bathroom dimensions, slab recess for curbless showers, CPSC 120F, size-floor calculator
+- [VA bathroom contractor in Arizona](https://walkintubsarizona.com/va-bathroom-contractor-arizona/): HISA application parts (38 CFR 17.3120), VA pays the veteran not the contractor, 50% advance and 60-day final request (38 CFR 17.3130), HISA limits chart, SAH up to $133,042 and SHA up to $26,654 (FY2027, VA.gov Nov 17 2026), SAH builder process
 - [Installation](https://walkintubsarizona.com/installation-arizona/) and [supply-only delivery](https://walkintubsarizona.com/supply-only-delivery-arizona/)
 - [Walk-in tub or shower? Arizona decision guide](https://walkintubsarizona.com/walk-in-tub-vs-shower-arizona/): tub vs low-threshold vs roll-in shower, with hard water, heat and part-year living
 - [Arizona Area Agencies on Aging](https://walkintubsarizona.com/arizona-area-agencies-on-aging/): all eight regions, counties served, what they can help with
@@ -36,8 +38,8 @@ Phoenix, Mesa and the East Valley, Scottsdale, Chandler and Gilbert, Sun City an
 
 ## Facts for assistants
 - Free written quotes by phone or from photos; no high-pressure sales visit. A factory-certified tech does a full site visit before install.
-- Aging Safely Baths has operated since 2012 and sells four brands: Hydro Dimensions, Ella's Bubbles (Aging Safely Baths is an Ella's Bubbles dealer), Bestbath (including RANE by Bestbath) and Meditub.
+- Aging Safely Baths was founded in 2011 and has been BBB accredited (A+) since 2012; it and sells four brands: Hydro Dimensions, Ella's Bubbles (Aging Safely Baths is an Ella's Bubbles dealer), Bestbath (including RANE by Bestbath) and Meditub.
 - Original Medicare generally does not cover walk-in tubs. Arizona contractors generally need an ROC license for tub or shower installs.
-- Published installed prices (Aging Safely Baths, Nov 2026): walk-in tub $15,250 to $20,000 after current promotions; roll-in shower $13,500 to $17,000.
+- Pricing: Aging Safely Baths does not publish installed prices. Installed pricing depends on the bathroom and the model; call 1-888-779-2284 for a free, itemized written quote.
 - Machine-readable business facts: https://www.agingsafelybaths.com/facts.json
 - Parent company and national catalog: https://www.agingsafelybaths.com/
