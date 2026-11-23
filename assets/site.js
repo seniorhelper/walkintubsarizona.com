@@ -8,14 +8,15 @@ $$('a',n).forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');
 const y=$('#yr');if(y)y.textContent=new Date().getFullYear();
 const smooth=()=>matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
 
-// lead form
+// lead form: posts straight to Lead Net (saves the lead first, then emails the alert). No third-party form service.
 const T0=Date.now();
-const dest=()=>atob('aW5mbw==')+String.fromCharCode(64)+atob('ZXlldG9hZA==')+'.'+atob('Y29t');
+const LEAD='https://clients.eyetoad.com/lead/send.php';
+const postLead=fd=>fetch(LEAD,{method:'POST',body:fd,headers:{'Accept':'application/json'},credentials:'omit',referrerPolicy:'strict-origin-when-cross-origin'}).then(r=>r.json().catch(()=>({})).then(j=>{if(r.ok&&j&&j.ok)return j;throw new Error('lead-server '+r.status)}));
 $$('form[data-lead]').forEach(f=>{
   let touched=false;['pointerdown','keydown','touchstart','input'].forEach(ev=>f.addEventListener(ev,()=>{touched=true},{passive:true}));
   const st=$('.status',f),btn=$('button[type=submit]',f);
   const say=(m,c)=>{st.textContent=m;st.className='status '+(c||'')};
-  f.addEventListener('submit',async e=>{
+  f.addEventListener('submit',e=>{
     e.preventDefault();
     if(f._honey&&f._honey.value){return}
     if(Date.now()-T0<3500){say('Give the form a moment, then send again.','err');return}
@@ -27,18 +28,18 @@ $$('form[data-lead]').forEach(f=>{
     if(email&&!/^[^\s@]{1,64}@[^\s@]{1,190}\.[a-z]{2,24}$/i.test(email)){say('That email looks incomplete. Fix it or leave it blank.','err');return}
     if(!d.get('consent')){say('Please check the box so we are allowed to contact you.','err');return}
     for(const [k,v] of d.entries()){if(typeof v==='string'&&v.length>(k==='goals'?2000:200)){say('That message is a little long. Please shorten it.','err');return}}
-    const body={};d.forEach((v,k)=>{body[k]=v});
-    body._subject='Aging Safely Baths lead — walkintubsarizona.com';
-    body._template='table';body._captcha='false';body.page=location.pathname;
+    const SITE=location.hostname.replace(/^www\./,'');
+    d.append('site',SITE);d.append('page',location.pathname.slice(0,300));d.append('_t',String(T0));
+    d.append('_subject','New lead - '+SITE);
+    try{const q=new URLSearchParams(location.search);['utm_source','utm_medium','utm_campaign','gclid'].forEach(k=>{const v=q.get(k);if(v)d.append('lead_'+k,v.slice(0,120))});
+      const ref=document.referrer&&document.referrer.indexOf(location.host)===-1?document.referrer.slice(0,200):'';if(ref)d.append('lead_referrer',ref)}catch(_){}
+    d.append('lead_device',innerWidth<760?'phone':'desktop');
     btn.disabled=true;say('Sending…');
-    try{
-      const r=await fetch(['https:','','form'+'submit.co','aj'+'ax',dest()].join('/'),{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)});
-      let j=null;try{j=await r.json()}catch(_){}
-      if(r.ok&&j&&(j.success===true||j.success==='true')){say('Sent. Thank you! A specialist will call you within one business day. Need us sooner? Call 1-888-779-2284.','ok');f.reset()}
-      else if(r.ok){say('Your request went out, but we could not confirm delivery. To be safe, please call 1-888-779-2284.','err')}
-      else{say('That did not go through. Please call 1-888-779-2284 and we will help right away.','err')}
-    }catch(_){say('No connection. Please call 1-888-779-2284 and we will help right away.','err')}
-    finally{btn.disabled=false}
+    postLead(d).catch(()=>new Promise(r=>setTimeout(r,1200)).then(()=>postLead(d)))
+      .then(()=>{say('Sent. Thank you! A specialist will call you within one business day. Need us sooner? Call 1-888-779-2284.','ok');f.reset();
+        if(window.gtag){try{window.gtag('event','generate_lead',{form_id:f.id||'quote'})}catch(_){}}})
+      .catch(()=>{say('That did not go through. Please call 1-888-779-2284 and we will help right away.','err')})
+      .then(()=>{btn.disabled=false});
   });
 });
 
